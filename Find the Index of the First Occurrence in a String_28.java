@@ -14,17 +14,32 @@ class Solution {
     public int strStr(String haystack, String needle) {
         int low = 0;
 		int lengthOfNeedle = needle.length();
-		while(haystack.contains(needle)) {
+
+		//Check if the length of needle and haystack is same
+		if (lengthOfNeedle == haystack.length()) {
+			if (needle.equals(haystack)) {// if both are strings are equal then return 0 else -1
+				return 0;
+
+			} else {
+				return -1;
+			}
+		//check if length of needle is greater than haystack
+		} else if (lengthOfNeedle > haystack.length()) {
+			return -1;
+		}
+
+		//if haystack contains needle then substring the haystack from the starting index to the length of needle
+		//if checking each substring untill the first occurence is found
+		while (haystack.contains(needle)) {
 			String newStr = haystack.substring(low, lengthOfNeedle);
 			if (newStr.equals(needle)) {
 				return low;
 			} else {
 				low++;
-                lengthOfNeedle++;
+				lengthOfNeedle++;
 			}
-			
-		}
 
+		}
 		return -1;
     }
 }
