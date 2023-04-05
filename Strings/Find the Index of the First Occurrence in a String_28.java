@@ -1,3 +1,5 @@
+//Two Pointer
+
 /* Example 1:
 
 Input: haystack = "sadbutsad", needle = "sad"
