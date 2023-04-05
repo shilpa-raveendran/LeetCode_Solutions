@@ -1,3 +1,5 @@
+//Prefix Sum
+
 class Solution {
     public int[] runningSum(int[] nums) {
         
