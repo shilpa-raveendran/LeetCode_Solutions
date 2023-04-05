@@ -1,3 +1,4 @@
+// Two Pointers
 class Solution {
     public int[] sortedSquares(int[] nums) {
         int[] res=new int[nums.length];
