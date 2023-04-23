@@ -1,11 +1,11 @@
 class Solution {
     public boolean isValid(String s) {
-       Stack<Character> stack = new Stack<>();
+       LinkedList<Character> stack = new LinkedList<>();
        for(char c : s.toCharArray()){
            if(c =='(' || c =='{' ||c =='['){
                stack.push(c);
            }else{
-               if(stack.empty()){
+               if(stack.isEmpty()){
 
                    return false;
 
@@ -28,6 +28,6 @@ class Solution {
            }
         
        }
-       return stack.empty();
+       return stack.isEmpty();
     }
 }
