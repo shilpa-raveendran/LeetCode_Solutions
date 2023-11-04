@@ -1,0 +1,20 @@
+class Solution {
+// If str1+ str2== str2+str1 then find the gcd of str1.len and str2.len
+
+    public String gcdOfStrings(String str1, String str2) {
+       if(!((str1 + str2).equals(str2 + str1))){
+           return "";
+       }else{
+            return str1.substring(0, gcd(str1.length(), str2.length()));
+       }
+    }
+    public int gcd(int a,int b)
+    {
+//using euclid algo
+        if(b==0)
+        return a;
+
+        return gcd(b,a%b);
+       // return gcd(b, Math.abs(a - b));
+    }
+}
